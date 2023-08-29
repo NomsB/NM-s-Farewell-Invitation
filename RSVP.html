@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> RSVP for Nompumelelo's Farewell Drinks </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="stylersvp.css">
+</head>
+<body>
+    <div class="container">
+
+        <span class="big-circle"></span>
+
+        <div class="form">
+            <!--contact-form-->
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="https://formsubmit.co/nomfundo@mahlako.co.za" method=POST>
+                    <!--HoneyPot-->
+                    <input type="text" name="_honey" style="display: none;">
+    
+                     <!--Disable Captcha-->
+                    <input type="hidden" name="_captcha" value="false">
+    
+                    <input type="hidden" name="_next" value="https://nomsb.github.io/Farewell/Success.html">
+
+                    <h3 class="title">RSVP to secure your seat!</h3>
+                    <div class="input-container">
+                        <input type="text" name="Full&nbsp;Name" id="userInput" class="input" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="email" name="Email&nbsp;Address" id="email" class="input" placeholder="Email" required>
+                    </div>
+
+                    <h3 class="title2">Will you be there?</h3>
+                    <div class="input-container">
+                        <label for="Yes" style="color:white"><input type="radio" name="Will&nbsp;You&nbsp;Be&nbsp;Attending" value="Yes" id="opt1" onclick="display(1)" unchecked> YES</label>
+                        <br><br>                
+                        <label for="Yes" style="color:white"><input type="radio" name="Will&nbsp;You&nbsp;Be&nbsp;Attending" value="No" id="opt2" onclick="display(0)" unchecked> NO</label>
+                    </div>
+
+                    <div class="input-container textarea">
+                        <textarea name="message" id="message" class="input" placeholder="Why not?" hidden></textarea>
+                    </div>
+
+                    <input type="submit" value="Send" class="btn">
+
+                    <script>
+                        /*show/hide txtbox*/
+                        function display(x){
+                            if(x==0)
+                            document.getElementById('message').style.display='block';
+                            else
+                            document.getElementById('message').style.display='none';
+                            return;
+                        }
+    
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
